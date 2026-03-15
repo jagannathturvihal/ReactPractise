@@ -1,11 +1,11 @@
-export default function TabButton({ children, handleClick }) {
+export default function TabButton({ isTabSelected, children, handleClick }) {
     // function handleOnClick() {
     //     console.log(`You clicked the ${children} tab!`);
     // }
     return (
         <li> 
             <h3>{children}</h3>
-            <button onClick={handleClick}>{ children }</button>
+            <button className = {isTabSelected ? 'active' : null}  onClick={handleClick}>{ children }</button>
         </li>
     );
 }
